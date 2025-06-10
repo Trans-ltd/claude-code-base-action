@@ -15,9 +15,8 @@ inputs:
     required: false
     default: ""
   allowed_tools:
-    description: "Comma-separated list of allowed tools for Claude Code to use"
+    description: "Additional tools for Claude to use (the base GitHub tools will always be included)"
     required: false
-    default: ""
   disallowed_tools:
     description: "Comma-separated list of disallowed tools that Claude Code cannot use"
     required: false
@@ -33,9 +32,11 @@ inputs:
   model:
     description: "Model to use (provider-specific format required for Bedrock/Vertex)"
     required: false
+    default: "claude-opus-4-20250514"
   anthropic_model:
     description: "DEPRECATED: Use 'model' instead. Model to use (provider-specific format required for Bedrock/Vertex)"
     required: false
+    default: "claude-opus-4-20250514"
 
   # Action settings
   timeout_minutes:
